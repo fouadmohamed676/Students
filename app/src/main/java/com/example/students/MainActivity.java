@@ -165,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
     private void getpashin(int id) {
         ProgressDialog pd = ProgressDialog.show(this, "جاري...", "جلب البيانات ...", false, false);
         StringRequest jr = new StringRequest(Request.Method.GET, "http://iparkingappksa.com/students_app/show/students.php"+id, response -> {
-//            Log.e(TAG, response);
             pd.dismiss();
             try {
 
@@ -239,15 +238,6 @@ public class MainActivity extends AppCompatActivity {
         public String name;
         public Integer Age;
 
-
-//        public int getPhone() {
-//            return phone;
-//        }
-
-//        public void setPhone(int phone) {
-//            this.phone = phone;
-//        }
-
         public Integer getDate() {
             return date;
         }
@@ -304,11 +294,6 @@ public class MainActivity extends AppCompatActivity {
             return 0;
         }
 
-//        @Override
-//        public View getView(int i, View view, ViewGroup viewGroup) {
-//            return null;
-//        }
-
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             ViewHolder vh;
@@ -323,7 +308,6 @@ public class MainActivity extends AppCompatActivity {
                 //on click Listener
 
                 view.findViewById(R.id.leen).setOnClickListener(view1 -> getpashin(arrNews.get(i).id));
-//                view.findViewById(R.id.donsnd).setOnClickListener(view1 -> dooone(arrNews.get(i).id));
 
                 view.setTag(vh);
             } else {
